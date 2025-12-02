@@ -20,65 +20,42 @@ The system detects multiple pedestrians in real time and assigns each person a u
 
 
 📁 Dataset: Penn-Fudan Pedestrian Dataset
-
 Each image has a corresponding segmentation mask where each pedestrian is encoded with a unique grayscale ID.
 
 Example:
-
 PNGImages/ → RGB images
-
 PedMasks/ → color-coded instance masks
 
 The code:
-
 extracts unique object IDs
-
 separates them into binary masks
-
 calculates bounding boxes
-
 prepares training labels (boxes, labels, area, mask metadata)
 
 
 🧠 Model Architecture
-Faster R-CNN with ResNet-50 FPN backbone
-
-Loads architecture from torchvision
-
-Initializes without pre-trained weights
-
-Custom classification head with output classes:
-
-background
-
-person
+✔ Faster R-CNN with ResNet-50 FPN backbone
+✔ Loads architecture from torchvision
+✔ Initializes without pre-trained weights
+✔ Custom classification head with output classes:
+✔ background
+✔ person
 
 Trained using:
-
-SGD optimizer
-
-Classification loss
-
-Bounding box regression loss
-
-RPN loss components
+✔ SGD optimizer
+✔ Classification loss
+✔ Bounding box regression loss
+✔ RPN loss components
 
 
 🧪 Training Pipeline
-
-Load dataset using PennFudanDatasetV2
-
-Convert segmentation masks → binary instance masks
-
-Extract bounding boxes for each person
-
-Create target dictionary for the model
-
-Train Faster R-CNN for 10 epochs
-
-Save trained model (multi_person_detector.pth)
-
-Loss is calculated internally by PyTorch’s detection engine.
+✔ Load dataset using PennFudanDatasetV2
+✔ Convert segmentation masks → binary instance masks
+✔ Extract bounding boxes for each person
+✔ Create target dictionary for the model
+✔ Train Faster R-CNN for 10 epochs
+✔ Save trained model (multi_person_detector.pth)
+✔ Loss is calculated internally by PyTorch’s detection engine.
 
 
 🎯 Centroid Tracking
