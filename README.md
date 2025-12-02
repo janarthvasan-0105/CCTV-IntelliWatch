@@ -1,32 +1,23 @@
 [BASE MODEL]
 
 👣 Multi-Person Detection & Tracking using Faster R-CNN + Centroid Tracker
-
 This project implements multi-person detection and tracking in videos using:
-
 Faster R-CNN (ResNet-50 FPN) trained from scratch
-
 Penn-Fudan Pedestrian Dataset
-
 Centroid Tracking algorithm for assigning persistent IDs
-
 The system detects multiple pedestrians in real time and assigns each person a unique ID, ensuring consistent tracking across video frames.
+
 
 📌 Features
 
 ✔ Custom dataset loader for image + segmentation mask processing
-
 ✔ Faster R-CNN object detection model (from scratch)
-
 ✔ Extracts bounding boxes automatically from masks
-
 ✔ Real-time detection on video
-
 ✔ Centroid Tracker assigns unique, stable IDs
-
 ✔ Tracks multiple people simultaneously
-
 ✔ Fully implemented in PyTorch + OpenCV
+
 
 📁 Dataset: Penn-Fudan Pedestrian Dataset
 
@@ -47,6 +38,7 @@ separates them into binary masks
 calculates bounding boxes
 
 prepares training labels (boxes, labels, area, mask metadata)
+
 
 🧠 Model Architecture
 Faster R-CNN with ResNet-50 FPN backbone
@@ -71,6 +63,7 @@ Bounding box regression loss
 
 RPN loss components
 
+
 🧪 Training Pipeline
 
 Load dataset using PennFudanDatasetV2
@@ -86,6 +79,7 @@ Train Faster R-CNN for 10 epochs
 Save trained model (multi_person_detector.pth)
 
 Loss is calculated internally by PyTorch’s detection engine.
+
 
 🎯 Centroid Tracking
 
@@ -111,6 +105,7 @@ Appear or disappear
 
 Temporary occlusion happens
 
+
 🎥 Real-Time Video Inference
 
 For each video frame:
@@ -132,6 +127,7 @@ Bounding boxes
 Object ID labels
 
 Display output in a live video window
+
 
 ▶️ How to Run
 1. Train the Model
