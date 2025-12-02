@@ -11,11 +11,17 @@ The system detects multiple pedestrians in real time and assigns each person a u
 📌 Features
 
 ✔ Custom dataset loader for image + segmentation mask processing
+
 ✔ Faster R-CNN object detection model (from scratch)
+
 ✔ Extracts bounding boxes automatically from masks
+
 ✔ Real-time detection on video
+
 ✔ Centroid Tracker assigns unique, stable IDs
+
 ✔ Tracks multiple people simultaneously
+
 ✔ Fully implemented in PyTorch + OpenCV
 
 
